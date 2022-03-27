@@ -6,3 +6,4 @@ gem 'shotgun' # auto-reloads out app when changes are made to server
 gem 'json'
 gem 'pry'
 gem 'dotenv'
+gem 'rack'
