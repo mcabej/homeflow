@@ -1,14 +1,10 @@
 body {
-  font-family: 'Roboto';
+  font-family: "Roboto";
+  background: "#262626";
 }
 
-main {
+h1 {
   padding: 20px;
+  font-size: 40px;
   text-align: center;
-  font-size: 18px;
-
-  h1 {
-    font-size: 40px;
-    text-align: center;
-  }
 }

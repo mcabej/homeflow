@@ -1,29 +1,29 @@
-const path = require('path');
+const path = require("path");
 
-const isProduction = process.env.NODE_ENV == 'production';
+const isProduction = process.env.NODE_ENV == "production";
 
 const config = {
-  entry: './src/index.js',
+  entry: "./src/index.js",
   output: {
-    path: path.resolve(__dirname, 'public'),
+    path: path.resolve(__dirname, "public"),
   },
   devServer: {
     open: true,
-    host: 'localhost',
+    host: "localhost",
   },
   module: {
     rules: [
       {
         test: /\.(js|jsx)$/i,
-        loader: 'babel-loader',
+        loader: "babel-loader",
       },
       {
         test: /\.s[ac]ss$/i,
-        use: ['style-loader', 'css-loader', 'sass-loader'],
+        use: ["style-loader", "css-loader", "sass-loader"],
       },
       {
         test: /\.(eot|svg|ttf|woff|woff2|png|jpg|gif)$/i,
-        type: 'asset',
+        type: "asset",
       },
     ],
   },
@@ -31,9 +31,10 @@ const config = {
 
 module.exports = () => {
   if (isProduction) {
-    config.mode = 'production';
+    config.mode = "production";
   } else {
-    config.mode = 'development';
+    config.mode = "development";
   }
+
   return config;
 };
