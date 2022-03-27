@@ -1,4 +1,7 @@
 require 'httparty'
+require 'dotenv'
+
+Dotenv.load('../.env')
 
 class HomeflowClient
   API_KEY = ENV['API_KEY'];
