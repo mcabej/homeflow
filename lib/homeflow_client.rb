@@ -11,6 +11,6 @@ class HomeflowClient
   
   private
 
-  API_KEY = ENV['API_KEY'];
-  URL = ENV['URL'];
+  API_KEY = ENV['API_KEY'] || settings.api_key;
+  URL = ENV['URL'] || settings.url;
 end
