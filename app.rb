@@ -1,11 +1,6 @@
 require 'sinatra'
 require 'json'
 require './lib/homeflow_client.rb'
-require 'dotenv'
-
-Dotenv.load
-
-configure { set :server, :thin }
 
 before do
   @client = HomeflowClient.new 

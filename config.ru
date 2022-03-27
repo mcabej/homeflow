@@ -1,7 +1,4 @@
 require './app'
-require 'dotenv'
-
-Dotenv.load
 
 configure do
     set :server, :thin    
