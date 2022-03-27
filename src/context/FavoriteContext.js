@@ -50,7 +50,7 @@ const initializer = (initialValue = initialState) => {
     return { favorites: favoriteData };
   }
 
-  return initialState;
+  return initialValue;
 };
 
 export const FavoriteContextProvider = (props) => {
