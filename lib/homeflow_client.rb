@@ -5,7 +5,7 @@ class HomeflowClient
     p "#{base_url}/properties?api_key=#{api_key}&search[address]=#{location}"
     HTTParty.get("#{base_url}/properties?api_key=#{api_key}&search[address]=#{location}")
   end
-
+  
   private
 
   def api_key

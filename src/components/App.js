@@ -1,8 +1,5 @@
-import React, { useState, useEffect, useContext } from "react";
-import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
-import Typography from "@mui/material/Typography";
+import { ArrowBack, Delete, Favorite, FavoriteBorder, FavoriteOutlined } from "@mui/icons-material";
+import SearchIcon from "@mui/icons-material/Search";
 import {
   Box,
   Button,
@@ -11,20 +8,19 @@ import {
   Dialog,
   DialogContent,
   DialogTitle,
-  Fab,
   Grid,
   IconButton,
   InputAdornment,
   MenuItem,
-  Tab,
-  Tabs,
   TextField,
 } from "@mui/material";
-import { FavoriteContext, FavoriteContextProvider } from "../context/FavoriteContext";
+import Card from "@mui/material/Card";
+import CardContent from "@mui/material/CardContent";
+import CardMedia from "@mui/material/CardMedia";
+import Typography from "@mui/material/Typography";
+import React, { useContext, useEffect, useState } from "react";
 import { v4 as uuidv4 } from "uuid";
-import SearchIcon from "@mui/icons-material/Search";
-import { ArrowBack, Delete, Favorite, FavoriteBorder, FavoriteOutlined, Remove } from "@mui/icons-material";
-import { SearchContext, SearchContextProvider } from "../context/SearchContext";
+import { FavoriteContext, FavoriteContextProvider } from "../context/FavoriteContext";
 
 const Property = ({ property, setOpenDetail }) => {
   const [state, dispatch] = useContext(FavoriteContext);
