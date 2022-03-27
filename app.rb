@@ -15,16 +15,8 @@ get '/' do
 end
 
 # property searching path
-if ENV['RACK_ENV'] == 'production'
-  get '/api/properties' do
-    api_response = @client.request(params['location'])
-    content_type :json
-    JSON.parse(api_response.body).to_json  
-  end
-else
-  get '/api/properties' do
-    api_response = @client.example_request(params['location'])
-    content_type :json
-    JSON.parse(api_response.body).to_json
-  end
+get '/api/properties' do
+  api_response = @client.request_by_location(params['location'])
+  content_type :json
+  JSON.parse(api_response.body).to_json
 end
